@@ -1,0 +1,12 @@
+flask
+beautifulsoup4
+requests
+nltk
+wordcloud
+matplotlib
+pandas
+scikit-learn
+joblib
+flask-mail
+python-dotenv
+gunicorn
