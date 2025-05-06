@@ -479,8 +479,14 @@ def api_analyze():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-import os
+from flask import Flask
 
-if _name_ == '_main_':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Railway!"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
